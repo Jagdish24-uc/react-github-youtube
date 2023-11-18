@@ -1,38 +1,73 @@
+/* src/App.css */
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  background-color: #f0f0f0; /* Example background color for the sidebar */
+  padding: 16px;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-item {
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.video-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 16px;
+}
+
+.video-thumbnail {
+  margin-bottom: 20px;
+  margin: 10px;
+  max-width: 300px;
+  background-color: #ffffff; /* Thumbnail background color */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(27, 31, 35, 0.1);
+  
+}
+
+.video-info {
+  padding: 10px;
+}
+html, body {
+  height: 100%;
+}
+body {
+  
+  position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the main container takes the full viewport height */
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #24292e; /* GitHub header background color */
+  color: #ffffff; /* GitHub header text color */
+  padding: 10px;
+  justify-content: space-between; /* Aligns items along the main axis (horizontally) */
+  align-items: center; /* Aligns items along the cross axis (vertically) */
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  flex-grow: 1;
+}
+.d-flex {
+  display: flex;
 }
